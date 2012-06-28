@@ -1,6 +1,6 @@
 <h1>seemore.js</h1>
 
-<p>A lightweight, simple jQuery framework for partial collapse and expand of html.</p>
+<p>A lightweight, simple jQuery plugin for partial collapse and expand of html.</p>
 
 <p>To use seemore.js, include jQuery and the seemore.js javascript source file in your html page with <code>&lt;script type='text/javascript' src='jquery.min.js'&gt;&lt;/script&gt;&lt;script type='text/javascript' src='seemore.js'&gt;&lt;/script&gt;</code>. Wrap your partially collapsable html in an element with class 'seemore', the part you would like hidden by default in an element with class 'seemore-more', and your toggle links in an element with class 'seemore-link' as such:</p>
 <code>&lt;p class='seemore'&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut<br> labore et dolore magna aliqua. Ut enim ad minim veniam&lt;span class='seemore-link'&gt;... &lt;a href='#'&gt;(more)&lt;/a&gt;<br>&lt;/span&gt;&lt;span class='seemore-more'&gt;, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br> consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur<br>sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>&lt;span class='seemore-link'&gt; &lt;a href='#'&gt;(less)&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;</code>
