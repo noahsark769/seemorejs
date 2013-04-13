@@ -1,6 +1,7 @@
 class Seemore
-	constructor: (@options, $element) ->
+	constructor: (options, $element) ->
 		@jq = $element
+		@options = options || {}
 		this.set_default_options()
 		this.setup()
 		this.bind()
