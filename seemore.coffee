@@ -96,6 +96,8 @@ $.fn.extend
 	seemore: (options) ->
 		options = options || {}
 		if typeof options == "string"
+			if options not in ["raw", "collapse", "expand"]
+				options = "raw"
 			if options == "raw"
 				return this.data "seemore"
 			else if options == 'collapse'

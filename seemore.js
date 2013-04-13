@@ -112,6 +112,9 @@
     seemore: function(options) {
       options = options || {};
       if (typeof options === "string") {
+        if (options !== "raw" && options !== "collapse" && options !== "expand") {
+          options = "raw";
+        }
         if (options === "raw") {
           return this.data("seemore");
         } else if (options === 'collapse') {
