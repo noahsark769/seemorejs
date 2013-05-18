@@ -44,13 +44,13 @@
 				<pre>$('.ex1').seemore();</pre>
 			</div>
 		</div>
-		<h3>Verying the initial amount displayed</h3>
+		<h3>Varying the initial amount displayed</h3>
 		<div class="row">
 			<div class="span6">
 				<p class='ex2'>When Gregor Samsa woke up one morning from unsettling dreams, he found himself changed in his bed into a monstrous vermin. He was lying on his back as hard as armor plate, and when he lifted his head a little, he saw his vaulted brown belly, sectioned by arch-shaped ribs, to whose dome the cover, about to slide off completely, could barely cling. His many legs, pitifully thin compared with the size of the rest of him, were waving helplessly before his eyes.</p>
 			</div>
 			<div class="span6">
-				<pre>$('.ex2').seemore({max_tokens: 40});</pre>
+				<pre>$('.ex2').seemore({max_tokens: 40, expand_by_default: true});</pre>
 			</div>
 		</div>
 		<div class="row">
@@ -134,7 +134,7 @@ $('.ex6').seemore({max_tokens: 30,
 				<td><code>collapse_callback</code></td><td>A function called when the text collapses</td>
 			</tr>
 			<tr>
-				<td><code>expand_by_default</code></td><td>Defaults to <code>true</code>. If false, the text will start out expended.</td>
+				<td><code>expand_by_default</code></td><td>Defaults to <code>false</code>. If true, the text will start out expended and the "less" link will appear by default.</td>
 			</tr>
 			<tr>
 				<td><code>link_class</code></td><td>A string to add to the class property of the &quot;see more&quot; and &quot;see less&quot; links, for easy styling.</td>
@@ -157,6 +157,7 @@ $('.ex6').seemore({max_tokens: 30,
 			</tr>
 		</table>
 	</div>
+	<div class="footer" style="width: 100%; text-align: center; font-size: 12px; margin-bottom: 20px;">Follow me on <a href="http://twitter.com/noahsark769">Twitter</a>. Here's my <a href='http://noahgilmore.com'>website</a> and <a href="http://blog.noahgilmore.com">blog</a>. Fork this <a href="https://github.com/noahsark769/quicktour.js/">here</a>.</div>
 	<a href="https://github.com/noahsark769/seemorejs"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
 
 </body>
