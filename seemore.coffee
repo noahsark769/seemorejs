@@ -106,6 +106,7 @@ $.fn.extend
 				this.data("seemore").expand()
 		else
 			this.data('seemore', new Seemore(options, this))
+		return $ this
 
 
 

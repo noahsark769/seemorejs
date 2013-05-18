@@ -118,13 +118,14 @@
         if (options === "raw") {
           return this.data("seemore");
         } else if (options === 'collapse') {
-          return this.data("seemore").collapse();
+          this.data("seemore").collapse();
         } else if (options === 'expand') {
-          return this.data("seemore").expand();
+          this.data("seemore").expand();
         }
       } else {
-        return this.data('seemore', new Seemore(options, this));
+        this.data('seemore', new Seemore(options, this));
       }
+      return $(this);
     }
   });
 
