@@ -11,6 +11,18 @@
       this.bind();
     }
 
+    Seemore.prototype.teardown = function() {
+      var _ref, _ref1, _ref2;
+
+      if ((_ref = this.more_link_jq) != null) {
+        _ref.remove();
+      }
+      if ((_ref1 = this.less_link_jq) != null) {
+        _ref1.remove();
+      }
+      return (_ref2 = this.more_jq) != null ? _ref2.replaceWith(this.more_jq.contents()) : void 0;
+    };
+
     Seemore.prototype.set_default_options = function() {
       this.max_chars = this.options.max_tokens != null ? null : this.options.max_chars || 30;
       this.max_tokens = this.options.max_tokens || null;
@@ -118,13 +130,17 @@
         if (options === "raw") {
           return this.data("seemore");
         } else if (options === 'collapse') {
-          return this.data("seemore").collapse();
+          this.data("seemore").collapse();
         } else if (options === 'expand') {
-          return this.data("seemore").expand();
+          this.data("seemore").expand();
         }
       } else {
-        return this.data('seemore', new Seemore(options, this));
+        if (this.data("seemore")) {
+          this.data("seemore").teardown();
+        }
+        this.data('seemore', new Seemore(options, this));
       }
+      return $(this);
     }
   });
 

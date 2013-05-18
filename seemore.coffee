@@ -5,6 +5,11 @@ class Seemore
 		this.setup()
 		this.bind()
 
+	teardown: ->
+		@more_link_jq?.remove()
+		@less_link_jq?.remove()
+		@more_jq?.replaceWith @more_jq.contents()
+
 	set_default_options: ->
 		@max_chars = if @options.max_tokens? then null else @options.max_chars || 30
 		@max_tokens = @options.max_tokens || null
@@ -35,6 +40,7 @@ class Seemore
 			@less_link_jq.children("a").addClass(@link_class)
 
 		# split the text up into two parts
+		# automatically works if max_showable > text.length, thanks javascript!
 		first = text.slice 0, max_showable
 		second = text.slice max_showable, text.length
 
@@ -105,7 +111,10 @@ $.fn.extend
 			else if options == 'expand'
 				this.data("seemore").expand()
 		else
-			this.data('seemore', new Seemore(options, this))
+			if this.data "seemore"
+				this.data("seemore").teardown()
+			this.data 'seemore', new Seemore(options, this)
+		return $ this
 
 
 
